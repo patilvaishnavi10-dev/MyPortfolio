@@ -16,13 +16,13 @@ export default function Portfolio() {
       title: "Library Practicals App",
       description: "Mini app to simulate borrowing books",
       tech: "React, Hooks, State",
-      link: "/practicals"
+      link: "https://patilvaishnavi10-dev.github.io/MyPortfolio/practicals"
     },
     {
       title: "FS Practical App",
       description: "Practicals 4 to 10 (Shopping Cart UI)",
       tech: "React, State, Props",
-      link: "/fsapp"
+      link: "https://patilvaishnavi10-dev.github.io/MyPortfolio/fsapp"
     },
     {
       title: "Weather Forecast App",
