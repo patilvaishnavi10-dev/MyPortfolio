@@ -44,6 +44,48 @@ const products = [
     price: 2999,
     image: `${process.env.PUBLIC_URL}/keyboard.png`,
     description: "RGB backlit keyboard with tactile switches."
+  },
+  {
+    id: 7,
+    name: "Wireless Earbuds",
+    price: 1299,
+    image: `${process.env.PUBLIC_URL}/headphone.png`,
+    description: "True wireless earbuds with active noise cancellation."
+  },
+  {
+    id: 8,
+    name: "Fitness Tracker",
+    price: 1999,
+    image: `${process.env.PUBLIC_URL}/smartwatch.png`,
+    description: "Advanced fitness tracker with heart rate monitoring."
+  },
+  {
+    id: 9,
+    name: "Portable Speaker",
+    price: 1299,
+    image: `${process.env.PUBLIC_URL}/speaker.png`,
+    description: "Compact wireless speaker with 360-degree sound."
+  },
+  {
+    id: 10,
+    name: "Gaming Mouse Pad",
+    price: 499,
+    image: `${process.env.PUBLIC_URL}/mouse.png`,
+    description: "Large gaming mouse pad with RGB lighting."
+  },
+  {
+    id: 11,
+    name: "Gaming Laptop",
+    price: 89999,
+    image: `${process.env.PUBLIC_URL}/laptop.png`,
+    description: "High-performance gaming laptop with RTX graphics."
+  },
+  {
+    id: 12,
+    name: "Wireless Keyboard",
+    price: 1999,
+    image: `${process.env.PUBLIC_URL}/keyboard.png`,
+    description: "Wireless mechanical keyboard with long battery life."
   }
 ];
 

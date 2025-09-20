@@ -19,8 +19,8 @@ export default function Portfolio() {
       link: "/practicals"
     },
     {
-      title: "FS Practical App",
-      description: "Practicals 4 to 10 (Shopping Cart UI)",
+      title: "Shopping Cart",
+      description: "Interactive shopping cart with product management",
       tech: "React, State, Props",
       link: "/fsapp"
     },
