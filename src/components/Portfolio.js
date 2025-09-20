@@ -22,7 +22,7 @@ export default function Portfolio() {
       title: "Shopping Cart",
       description: "Interactive shopping cart with product management",
       tech: "React, State, Props",
-      link: "/fsapp"
+      extLink: "https://patilvaishnavi10-dev.github.io/MyPortfolio/fsapp"
     },
     {
       title: "Weather Forecast App",
