@@ -1,5 +1,6 @@
 // src/components/FSApp.js
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const products = [
   {
@@ -67,6 +68,52 @@ export default function FSApp() {
 
   return (
     <div style={styles.page}>
+      {/* Navigation Bar */}
+      <div style={styles.navbar}>
+        <Link 
+          to="/" 
+          style={styles.navLink}
+          onMouseEnter={(e) => {
+            e.target.style.background = "rgba(255, 255, 255, 0.3)";
+            e.target.style.transform = "translateY(-2px)";
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.background = "rgba(255, 255, 255, 0.2)";
+            e.target.style.transform = "translateY(0)";
+          }}
+        >
+          🏠 Home
+        </Link>
+        <Link 
+          to="/portfolio" 
+          style={styles.navLink}
+          onMouseEnter={(e) => {
+            e.target.style.background = "rgba(255, 255, 255, 0.3)";
+            e.target.style.transform = "translateY(-2px)";
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.background = "rgba(255, 255, 255, 0.2)";
+            e.target.style.transform = "translateY(0)";
+          }}
+        >
+          💼 Portfolio
+        </Link>
+        <Link 
+          to="/contact" 
+          style={styles.navLink}
+          onMouseEnter={(e) => {
+            e.target.style.background = "rgba(255, 255, 255, 0.3)";
+            e.target.style.transform = "translateY(-2px)";
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.background = "rgba(255, 255, 255, 0.2)";
+            e.target.style.transform = "translateY(0)";
+          }}
+        >
+          📧 Contact
+        </Link>
+      </div>
+      
       <h1 style={styles.title}>🛒 Shopping Cart</h1>
 
       <div style={styles.grid}>
@@ -121,6 +168,25 @@ const styles = {
     background: "linear-gradient(135deg, #075294ff 0%, #bdeef1ff 100%)",
     minHeight: "100vh",
     fontFamily: "'Poppins', sans-serif"
+  },
+  navbar: {
+    display: "flex",
+    justifyContent: "center",
+    gap: "20px",
+    marginBottom: "30px",
+    padding: "15px",
+    background: "rgba(255, 255, 255, 0.1)",
+    borderRadius: "12px",
+    backdropFilter: "blur(10px)"
+  },
+  navLink: {
+    color: "white",
+    textDecoration: "none",
+    padding: "8px 16px",
+    borderRadius: "8px",
+    background: "rgba(255, 255, 255, 0.2)",
+    transition: "all 0.3s ease",
+    fontWeight: "500"
   },
   title: { textAlign: "center", color: "white", marginBottom: "30px" },
   grid: {
