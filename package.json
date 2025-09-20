@@ -2,7 +2,7 @@
   "name": "student-website",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://patilvaishnavi10-dev.github.io/student-website",
+  "homepage": "https://patilvaishnavi10-dev.github.io/MyPortfolio",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
