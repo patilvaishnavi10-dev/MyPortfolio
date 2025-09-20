@@ -6,73 +6,46 @@ const products = [
     id: 1,
     name: "Wireless Headphones",
     price: 2499,
-    image: "https://cdn.pixabay.com/photo/2016/11/29/03/53/headphones-1867752_1280.jpg",
+    image: `${process.env.PUBLIC_URL}/headphone.png`,
     description: "Noise-cancelling wireless headphones with long battery life."
   },
   {
     id: 2,
     name: "Smartwatch",
     price: 3999,
-    image: "https://cdn.pixabay.com/photo/2016/03/27/20/55/apple-1284089_1280.jpg",
+    image: `${process.env.PUBLIC_URL}/smartwatch.png`,
     description: "Track fitness, monitor heart rate, and get notifications."
   },
   {
     id: 3,
     name: "Bluetooth Speaker",
     price: 1799,
-    image: "https://cdn.pixabay.com/photo/2016/12/06/18/27/bluetooth-1882338_1280.jpg",
+    image: `${process.env.PUBLIC_URL}/speaker.png`,
     description: "Portable speaker with rich bass and waterproof design."
   },
   {
     id: 4,
     name: "Gaming Mouse",
     price: 999,
-    image: "https://cdn.pixabay.com/photo/2014/04/03/11/51/mouse-312324_1280.png",
+    image: `${process.env.PUBLIC_URL}/mouse.png`,
     description: "High precision RGB gaming mouse with ergonomic design."
   },
   {
     id: 5,
     name: "Laptop",
-    price: 54999,
-    image: "https://cdn.pixabay.com/photo/2014/05/02/21/50/home-office-336373_1280.jpg",
+    price: 59999,
+    image: `${process.env.PUBLIC_URL}/laptop.png`,
     description: "Powerful laptop for work and gaming."
   },
   {
     id: 6,
     name: "Mechanical Keyboard",
     price: 2999,
-    image: "https://cdn.pixabay.com/photo/2016/03/26/22/14/keyboard-1281630_1280.jpg",
-    description: "RGB mechanical keyboard with tactile keys."
-  },
-  {
-    id: 7,
-    name: "LED Monitor",
-    price: 9999,
-    image: "https://cdn.pixabay.com/photo/2015/01/08/18/26/monitor-593337_1280.jpg",
-    description: "24-inch LED monitor with vivid colors."
-  },
-  {
-    id: 8,
-    name: "DSLR Camera",
-    price: 34999,
-    image: "https://cdn.pixabay.com/photo/2015/01/08/18/29/camera-593353_1280jpg",
-    description: "High-quality DSLR camera for photography."
-  },
-  {
-    id: 9,
-    name: "Smartphone",
-    price: 24999,
-    image: "https://cdn.pixabay.com/photo/2014/05/02/21/50/iphone-336374_1280.jpg",
-    description: "Latest smartphone with high-resolution camera."
-  },
-  {
-    id: 10,
-    name: "Headset",
-    price: 1499,
-    image: "https://cdn.pixabay.com/photo/2017/05/12/14/47/headphones-2304145_1280.jpg",
-    description: "Stereo headset for gaming and calls."
+    image: `${process.env.PUBLIC_URL}/keyboard.png`,
+    description: "RGB backlit keyboard with tactile switches."
   }
 ];
+
 
 export default function FSApp() {
   const [cart, setCart] = useState([]);

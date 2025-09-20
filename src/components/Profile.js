@@ -1,11 +1,12 @@
 // src/components/Profile.js
+import { Link } from "react-router-dom";
 
 export default function Profile() {
   return (
     <div style={styles.page}>
       <div style={styles.card}>
-        {/* ✅ Pulls image from public/ */}
-        <img src="/profile.png" alt="Profile" style={styles.image} />
+        {/* ✅ Works locally and on GitHub Pages */}
+        <img src={`${process.env.PUBLIC_URL}/profile.png`} alt="Profile" style={styles.image} />
 
         <h1 style={styles.title}>Hi, I'm Vaishnavi Patil</h1>
         <p style={styles.subtitle}>
@@ -16,9 +17,9 @@ export default function Profile() {
           <a href="/resume.pdf" style={styles.button} download>
             📄 Resume
           </a>
-          <a href="/contact" style={styles.buttonAlt}>
+          <Link to="/contact" style={styles.buttonAlt}>
             ✉️ Contact Me
-          </a>
+          </Link>
         </div>
       </div>
     </div>

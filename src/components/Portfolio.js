@@ -1,7 +1,10 @@
 // src/components/Portfolio.js
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export default function Portfolio() {
+  const [selectedFilter, setSelectedFilter] = useState("All");
+  
   const projects = [
     {
       title: "Personal Website",
@@ -41,11 +44,39 @@ export default function Portfolio() {
     }
   ];
 
+  // Get unique technologies for filter options
+  const allTechs = ["All", ...new Set(projects.flatMap(p => p.tech.split(", ")))];
+  
+  // Filter projects based on selected technology
+  const filteredProjects = selectedFilter === "All" 
+    ? projects 
+    : projects.filter(project => project.tech.toLowerCase().includes(selectedFilter.toLowerCase()));
+
   return (
     <div style={styles.page}>
       <h1 style={styles.title}> My Portfolio</h1>
+      
+      {/* Filter Bar */}
+      <div style={styles.filterContainer}>
+        <h3 style={styles.filterTitle}>Filter by Technology:</h3>
+        <div style={styles.filterButtons}>
+          {allTechs.map(tech => (
+            <button
+              key={tech}
+              onClick={() => setSelectedFilter(tech)}
+              style={{
+                ...styles.filterButton,
+                ...(selectedFilter === tech ? styles.filterButtonActive : {})
+              }}
+            >
+              {tech}
+            </button>
+          ))}
+        </div>
+      </div>
+
       <div style={styles.grid}>
-        {projects.map((p, i) => (
+        {filteredProjects.map((p, i) => (
           <div
             key={i}
             style={styles.card}
@@ -90,6 +121,40 @@ const styles = {
     fontSize: "2.5rem",
     color: "#fff",
     marginBottom: "30px"
+  },
+  filterContainer: {
+    textAlign: "center",
+    marginBottom: "30px",
+    padding: "0 20px"
+  },
+  filterTitle: {
+    color: "#fff",
+    fontSize: "1.2rem",
+    marginBottom: "15px",
+    fontWeight: "500"
+  },
+  filterButtons: {
+    display: "flex",
+    justifyContent: "center",
+    gap: "10px",
+    flexWrap: "wrap"
+  },
+  filterButton: {
+    padding: "8px 16px",
+    borderRadius: "20px",
+    border: "2px solid rgba(255, 255, 255, 0.3)",
+    background: "rgba(255, 255, 255, 0.1)",
+    color: "#fff",
+    cursor: "pointer",
+    transition: "all 0.3s ease",
+    fontSize: "0.9rem",
+    fontWeight: "500"
+  },
+  filterButtonActive: {
+    background: "rgba(255, 255, 255, 0.9)",
+    color: "#0077b6",
+    border: "2px solid #fff",
+    transform: "scale(1.05)"
   },
   grid: {
     display: "flex",
