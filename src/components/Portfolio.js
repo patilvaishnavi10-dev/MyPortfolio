@@ -96,7 +96,7 @@ export default function Portfolio() {
             <p><b>Tech:</b> {p.tech}</p>
 
             {p.link ? (
-              <Link to={p.link} style={styles.button}>Open Project</Link>
+              <a href={p.link} target="_blank" rel="noopener noreferrer" style={styles.button}>Open Project</a>
             ) : (
               <a href={p.extLink} target="_blank" rel="noopener noreferrer" style={styles.button}>
                 View on GitHub
